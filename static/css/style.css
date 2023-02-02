@@ -1,0 +1,570 @@
+/* VARIABLES */
+:root {
+    --baseFontSize: 100%;
+    --borderRadius: 15px;
+}
+
+/* LAYOUT */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    max-width: 100%;
+    padding: 1%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION BAR */
+
+.topnav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 1%;
+    width: 100%;
+    background-color: white;
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.topnav ul li {
+    float: left;
+}
+
+#topnav-lang {
+    float: right;
+}
+
+.topnav a {
+    color: #333;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: calc(var(--baseFontSize) + 10%);
+    display: block;
+    border-radius: 25px;
+}
+
+.topnav a:hover {
+    transition: 1s;
+    background-color: #D0D3D4;
+    color: black;
+}
+
+/* TWO COLUMNS FOR THE CONTENT*/
+
+/* Create two unequal columns that floats next to each other */
+
+.row-body {
+    max-width: 65%;
+    min-width: 65%;
+    margin: auto;
+}
+
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 70%;
+}
+
+/* Right column */
+.rightcolumn {
+    position: -webkit-sticky;
+    position: sticky;   
+    top: 12%;
+    float: left;
+    width: 25%;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+}
+
+.leftcolumn p {
+    line-height: 1.5;
+    font-family: Verdana, sans-serif;
+    font-size: calc(var(--baseFontSize) + 20%);
+    text-align: justify;
+}
+
+
+/* When there are footnotes, Hugo place them at the end of the page under the footnotes class, this modifies
+   the fontsize and the display in general of the footnotes */
+.footnotes p {
+    line-height: 1.5;
+    font-family: Verdana, sans-serif;
+    font-size: var(--baseFontSize);
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+}
+
+.footnotes ol ::marker {
+    font-size: calc(var(--baseFontSize) - 15%);
+}
+
+article.content sup, article.content sub {
+    font-size: calc(var(--baseFontSize) - 25%);
+}
+
+/* How to display the related content? The next clases specify it */
+.related-content-div, .catRSS {
+    padding: 5px;
+}
+
+.related-content-div a, .catRSS a {
+    color: #333;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.related-content-div ul, .catRSS ul {
+    margin-left: 15px;
+    padding: 5px;
+}
+
+.related-content-div ul li, .catRSS ul li {
+    padding: 5px;
+    margin: 5px;
+}
+.related-content-div li:hover, .catRSS a:hover {
+  background: #D0D3D4;
+  color: black;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+ /* Ctaegories and Tags cloud design */
+
+.catagcloud {
+    padding: 5px;
+    text-align: center;
+}
+
+.catagcloud ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.catagcloud ul li {
+    display: inline;
+}
+
+.catagcloud a {
+    color: #333;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.catagcloud a:hover {
+  background: #D0D3D4;
+  color: black;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+
+/* Clear floats after the columns */
+
+.row::after, .row-body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+
+.footer {
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #ECF0F1;
+    border-radius: 25px;
+}
+
+/* POSTS BODY */
+
+article.content ul li, article.content ol li{
+    padding: 5px;
+    font-size: calc(var(--baseFontSize) + 20%);
+    text-align: justify;
+}
+
+/* Define the style of the post's tags */
+ul.post-tags, ul.post-translations{
+    /* display: block; */
+    list-style-type: none;
+    margin-left: 1.5%;
+    padding: 10px;
+}
+
+ul.post-tags li, .post-translations li {
+    display: inline;
+}
+
+.post-tags a, .post-translations a {
+    color: #333;
+    text-align: center;
+    padding: 5px;
+    font-size: calc(var(--baseFontSize) - 5%);
+}
+
+.post-tags a:hover, .post-translations a:hover {
+    transition: 0.2s;
+    background-color: #D0D3D4;
+    border-radius: var(--borderRadius);
+    color: black;
+}
+
+/* Define the style of the post date and reading info */
+
+#post-date-and-reading, .post-translations {
+    color: #333;
+    font-size: calc(var(--baseFontSize) - 5%);
+    margin-top: -3%;
+    margin-left: 1.5%;
+    padding: 10px;
+}
+
+/* FIGURES */
+
+/* Polaroid style */
+
+figure.polaroidImage {
+    max-width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+figure.polaroidImage img {
+    width: 100%;
+}
+
+figure.polaroidImage figcaption p {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+    font-size: var(--baseFontSize);
+}
+
+/* Plain style */
+
+figure.plainImage {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+figure.plainImage img {
+    max-width: 100%;
+}
+
+figure.plainImage figcaption p {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+    font-size: var(--baseFontSize);
+}
+
+/* Gallery */
+
+div.entryGallery {
+  border: 1px solid #ccc;
+}
+
+div.entryGallery:hover {
+  border: 1px solid #777;
+}
+
+div.entryGallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.captionGallery p {
+    padding: 5px;
+    margin: 0;
+    font-size: var(--baseFontSize);
+    text-align: center;
+}
+
+.responsiveGallery {
+  padding: 4px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsiveGallery {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsiveGallery {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* HEADINGS */
+
+h1.post-title {
+    font-size: calc(var(--baseFontSize) + 125%);
+    font-family: Georgia, serif;
+    font-variant: small-caps;
+    padding: 1px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: calc(var(--baseFontSize) + 70%);
+    font-family: Georgia, serif;
+}
+
+h2 {
+    font-size: calc(var(--baseFontSize) + 40%);
+    font-family: Georgia, serif;
+}
+
+h3 {
+    font-size: calc(var(--baseFontSize) + 30%);
+    font-family: Georgia, serif;
+}
+
+h4 {
+    font-size: calc(var(--baseFontSize) + 20%);
+    font-family: Georgia, serif;
+}
+
+h3#rcolumn-titles {
+    text-align:center;
+}
+
+/* LISTS OF POSTS*/
+
+/* Distance between posts */
+.post-snippet {
+    margin-bottom: 5%;
+}
+
+/* Distance between the post title and the date */
+.post-snippet h2 {
+    margin-bottom: 10px;
+}
+
+.post-snippet-summary {
+    line-height: 1.2;
+    margin-top: 5px;
+    font-family: Verdana, sans-serif;
+    font-size: var(--baseFontSize);
+    text-align: justify;
+    color: black;
+}
+
+a.post-snippet-summary:hover {
+  background: #D0D3D4;
+  color: black;
+  padding: 5px;;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+
+.latest-posts {
+    margin-top: 10%;
+}
+
+
+/* LINK DECORATION */
+
+/* Removes the underline in links */
+a {
+  text-decoration: none;
+}
+
+/* NEXT AND PREVIOUS ARTICLE IN THE POST VIEW */
+
+.prevart {
+    float: left;
+    text-align: left;
+    max-width: 46%;
+    font-size: calc(var(--baseFontSize) + 10%);
+    margin-top: 5%;
+}
+
+.nextart {
+    float: right;
+    text-align: right;
+    max-width: 46%;
+    font-size: calc(var(--baseFontSize) + 10%);
+    margin-top: 5%;
+}
+
+.prevart a, .nextart a {
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/* .prevart a:hover, .nextart a:hover { */
+/*     transition: 0.2s; */
+/*     background-color: #D0D3D4; */
+/*     border-radius: 25px; */
+/*     color: black; */
+/* } */
+
+
+/* PAGINATOR */
+
+.pagination {
+    display: flex;
+    list-style: none;
+    border-radius: 25px;
+    margin: 20px 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.page-link {
+    /* position: relative; */
+    display: block;
+    padding: 10px;
+    color: #000000;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #000000;
+    border-bottom-style: solid;
+}
+
+.page-link:hover {
+    transition: 0.2s;
+    background-color: #D0D3D4;
+    border-radius: 25px;
+    color: black;
+}
+
+
+/* RESPONSIVE LAYOUT - WHEN THE SCREEN IS LESS THAN 400PX WIDE, MAKE THE NAVIGATION LINKS STACK ON TOP OF EACH OTHER INSTEAD OF NEXT TO EACH OTHER */
+
+@media screen and (max-width: 1600px) {
+    .row-body {
+	max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .row-body {
+	max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .row-body {
+	max-width: 75%;
+    }
+    
+    .leftcolumn  {   
+	width: 100%;
+	padding: 0;
+	margin: auto;
+    }
+
+    .rightcolumn  {   
+	width: 100%;
+	margin: auto;
+	margin-top: 5%;
+    }
+
+    .prevart, .nextart {   
+	max-width: 100%;
+	padding: 5px;
+	margin-top: 1%;
+	float: none;
+	text-align: left;
+    }
+    
+    .prevart a, .nextart a {
+	padding: 3px;
+	border-radius: 25px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .row-body {
+	max-width: 90%;
+    }
+
+    #topnav-lang {
+	float: left;
+    }
+
+    .topnav {
+	position: static;
+    }
+    
+    .leftcolumn p {
+	font-size: calc(var(--baseFontSize) + 0%);
+	text-align: left;
+    }
+
+    article.content ul li, article.content ol li {
+	font-size: calc(var(--baseFontSize) + 0%);
+	text-align: left;
+    }
+    
+    .footnotes p {
+	font-size: calc(var(--baseFontSize) - 15%);
+	text-align: left;
+    }
+
+    .footnotes ol ::marker {
+	font-size: calc(var(--baseFontSize) - 15%);
+    }
+
+    figure.polaroidImage figcaption p, figure.plainImage figcaption p {
+	font-size: calc(var(--baseFontSize) - 10%);
+    }
+
+    div.captionGallery p {
+	font-size: calc(var(--baseFontSize) - 10%);
+    }
+}
+

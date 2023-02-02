@@ -1,0 +1,65 @@
+[home]
+	other = "Inicio"
+
+[tags]
+	other = "Etiquetas"
+
+[categories]
+	other = "Categorías"
+
+[posts]
+	other = "Publicaciones"
+
+[about]
+	other = "¿Quiénes somos?"
+
+[contact]
+	other = "Contacto"
+
+[latestPosts]
+	other = "Últimas publicaciones"
+
+[publishDate]
+	other = "Publicado:"
+
+[lastmodDate]
+	other = "Modificado por última vez:"
+
+[postWordCount]
+	one = "{{ .WordCount }} palabra"
+	other = "{{ .WordCount }} palabras"
+
+[translated]
+	other = "Esta publicación cuenta con la traducción"
+
+[relatedPosts]
+	other = "Publicaciones relacionadas"
+
+[prevPost]
+	other = "Artículo previo: "
+
+[nextPost]
+	other = "Artículo siguiente: "
+
+[keepReading]
+	other = "Continuar leyendo..."
+
+
+[websiteRSS]
+	other = "RSS de todo el sitio en Español"
+
+[license-more]
+	other = "Lea más acerca de la Licencia del sitio y todo su contenido asociado en"
+
+[license]
+	other = "Información Legal"
+	
+# The next translations are for the theme/layout/_default/rss.xml and the RSS generation
+
+[recContent]
+	other = "Contenido reciente"
+
+[on]
+	other = "en"
+
+

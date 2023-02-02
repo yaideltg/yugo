@@ -1,0 +1,78 @@
+{{ define "main" }}
+
+<section>
+
+  <h1 class="post-title">{{ .Title }}</h1>
+
+  <div id="post-mdata">
+
+    <!-- Show the tags of this page -->
+    <ul class="post-tags">
+      {{ range (.GetTerms "tags") }}
+      <li><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></li>
+      {{ end }}
+    </ul>
+
+    <!-- Show relevant dates and reading information -->
+    {{ $date := .Date.Format "02.01.2006" }}
+    {{ $lastmod := .Lastmod.Format "02.01.2006" }}
+
+    <p id="post-date-and-reading">
+      {{ i18n "publishDate" }} {{ .Date.Format "Jan 2, 2006" }}
+      {{- if gt $lastmod $date -}}
+      . {{ i18n "lastmodDate"}} {{ .Lastmod.Format "Jan 2, 2006" }}
+      {{- end -}}
+      <br>
+      {{ i18n "postWordCount" . }}, {{ .ReadingTime }} min
+    </p>
+
+    <!-- Show available translations to this post -->
+    {{ if .IsTranslated }}
+    <ul class="post-translations">
+      {{ range .Translations }}
+      <li> {{ i18n "translated" }}<a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    
+  </div>
+  
+  <article class="content">
+    {{ .Content }}
+  </article>
+  
+</section>
+
+{{ end }}
+
+
+
+{{ define "footer" }}
+
+<div class="related-content-div">
+  {{ $related := first 1 ( where ( .Site.RegularPages.Related . ) "Type" "posts" ) }}
+  <!-- {{ $related := .Site.RegularPages.Related . | first 5 }} -->
+  {{ with $related }}
+  <h1>{{ i18n "relatedPosts" }}</h1>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+{{ with .PrevInSection }}
+<div class="prevart">
+  {{ i18n "prevPost" }}<a href="{{.Permalink}}"> {{.Title}}</a>
+</div>
+{{ end }}
+{{ with .NextInSection }}
+<div class="nextart">
+  {{ i18n "nextPost" }}<a href="{{.Permalink}}"> {{.Title}}</a>
+</div>
+{{ end }}
+
+{{ end }}
+

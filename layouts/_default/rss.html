@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div>
+  <section>
+    {{ with .Title }}
+    <h1>{{ . }}</h1>
+    {{ end }}
+
+    {{ with .Content }}{{ . }}{{ end }} 
+    
+    <div class="catRSS">
+      {{ with .Site.Home.OutputFormats.Get "rss" }}
+      <p>{{ i18n "websiteRSS" }}: <a href="{{ .Permalink }}"> RSS Feed</a></p>
+      {{ end }}
+
+      {{ range $taxonomyName, $taxonomy := .Site.Taxonomies }} 
+      {{ if ne $taxonomyName "tags" }}
+      <h1>{{ $taxonomyName | title }}</h1>
+      <ul>
+        {{ range $key, $value := $taxonomy }}
+        {{ with $value.Page.OutputFormats.Get "rss" }}
+        <li><a href="{{ .Permalink }}">{{ $value.Page.Title }}</a></li>
+        {{ end }}
+        {{ end }}
+      </ul>
+      {{ end }} 
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<br>
+<article class="content">
+{{ .Content }}
+</article>
+<br>
+<br>
+
+{{ range .Paginator.Pages.ByPublishDate.Reverse }}
+
+{{ partial "postlist" . }}
+
+{{ end }}
+
+{{ partial "pagination" . }}
+
+{{ end }}

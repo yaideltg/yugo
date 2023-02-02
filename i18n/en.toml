@@ -1,0 +1,61 @@
+[home]
+	other = "Home"
+
+[tags]
+	other = "Site tags"
+
+[categories]
+	other = "Categories"
+
+
+[latestPosts]
+	other = "Latest posts"
+
+[publishDate]
+	other = "Published:"
+
+[lastmodDate]
+	other = "Last modified:"
+
+[postWordCount]
+	one = "{{ .WordCount }} word"
+	other = "{{ .WordCount }} words"
+
+[translated]
+	other = "This publication has the translation"
+
+[relatedPosts]
+	other = "Related posts"
+
+[prevPost]
+	other = "Previous article: "
+
+[nextPost]
+	other = "Next article: "
+
+[keepReading]
+	other = "Read more..."
+
+[websiteRSS]
+	other = "Whole site RSS in English"
+
+[license-more]
+	other = "Read more about the Licensing of the site and all related content at"
+
+[license]
+	other = "Legal Information"
+
+# The next translations are for the theme/layout/_default/rss.xml and the RSS generation
+
+[recContent]
+	other = "Recent content"
+
+[on]
+	other = "on"
+
+
+
+
+
+
+

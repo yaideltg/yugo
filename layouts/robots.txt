@@ -1,0 +1,22 @@
+User-agent: *
+Disallow: /contact/
+Disallow: /es/contact/
+Disallow: /rss/
+Disallow: /es/rss/
+Disallow: /license/
+Disallow: /es/license/
+Disallow: 404.html
+Disallow: /es/404.html
+Disallow: /tags/
+Disallow: /es/tags/
+Disallow: /categories/
+Disallow: /es/categories/
+
+{{ range where .Site.Pages "Params.robotsdisallow" true }}
+Disallow: {{ .RelPermalink }}
+{{- if .IsTranslated -}}
+{{- range $trans := .Translations -}}
+{{ with .Params.robotsdisallow }}
+Disallow: {{ $trans.RelPermalink }} {{ end }} {{ end }} {{ end }} {{ end }}
+
+Sitemap: {{ "sitemap.xml" | absLangURL }}

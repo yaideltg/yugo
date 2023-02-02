@@ -1,0 +1,21 @@
+<!-- HANDLING TAGS CLOUD -->
+<div class="catagcloud">
+  <h3 id="rcolumn-title">{{ i18n "tags" }}</h3>
+  <ul>
+    {{ range .Site.Taxonomies.tags }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}<sup>{{ .Count }}</sup></a></li>
+    {{ end }}
+  </ul>
+
+</div>
+
+
+<!-- HANDLING THE CATEGORIES CLOUD -->
+<div class="catagcloud">
+  <h3 id="rcolumn-titles">{{ i18n "categories" }}</h3>
+  <ul>
+    {{ range .Site.Taxonomies.categories }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}<sup>{{ .Count }}</sup></a></li>
+    {{ end }}
+  </ul>
+</div>

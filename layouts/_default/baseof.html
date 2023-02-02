@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+
+  <head>
+    {{ partial "head" . }}
+  </head>
+
+
+  <body>
+
+    <header class="site-header"></header>
+
+    <nav class="topnav">
+      {{ partial "topNavigationBar" . }}
+    </nav>
+    
+
+    <div class="row-body">
+      
+      <div class="leftcolumn">
+	{{ block "main" . }}
+	<!-- The part of the page that begins to differ between templates -->
+	{{ end }}
+	{{ block "footer" . }}
+	<!-- A footer that can be overridden if need  -->
+	{{ end }}
+      </div>
+
+      <div class="rightcolumn">
+	{{ partial "tagsCategoriesCloud" . }}
+      </div>
+      
+    </div>
+    
+    <footer class="footer">
+      {{ partial "footer" . }}
+    </footer>
+
+  </body>
+  
+</html>

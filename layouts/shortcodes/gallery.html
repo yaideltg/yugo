@@ -1,0 +1,35 @@
+<!--
+    Taken from:
+    https://nevinsky.net/post/how-to-create-gallery-in-hugo-post/
+    and
+    https://github.com/liwenyip/hugo-easy-gallery/blob/master/layouts/shortcodes/gallery.html
+     
+    dir: directory which is a .Page.Resource of the current page
+-->
+
+{{ $dir := print (.Get "dir") "/*"}}
+
+{{ with .Page.Resources.Match $dir }}
+
+<div>
+{{ range . }}
+
+{{- $caption :=  index (findRE "[^/]*$" .) 0 | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
+
+<div class="responsiveGallery">
+  <div class="entryGallery">
+    <a target="_blank" href="{{ .Permalink }}">    
+      <img src="{{ .Permalink }}"	alt="A picture describing: {{ .Permalink }}"/>
+    </a>
+    <div class="captionGallery">
+      <p><i>{{ $caption }}</i></p>
+    </div>
+  </div>
+</div>
+{{ end }}
+</div>
+
+<div class="clearfix"></div>
+
+{{ end }}
+

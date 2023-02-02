@@ -1,0 +1,45 @@
+<!--
+    Taken from: https://gohugo.io/templates/shortcode-templates/
+
+    class:   class of the figure either "polaroidImage" or "plainImage"
+    src:     image location
+    alt:     alternative text to show in case the figure is not found (mandatory in html)
+    caption: caption
+    width:   width of the figure's frame (the figures is 100% of the frame) (default: 100%)
+    link:    url the image directs to
+    mouse:   hat the image says when moused over ("title" in HTML)
+-->
+
+<!-- Image -->
+<figure {{ with .Get "class" }}class="{{.}}"{{ end }}
+	{{ with .Get "width" }}style="width: {{.}};"{{ end }}
+	>
+
+  {{ if (.Get "link") }}
+  {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
+    {{ else }}
+    {{ with .Get "src" }}<a target="_blank" href="{{.}}">{{ end }}
+      {{ end }}
+    
+    <img src="{{ .Get "src" }}"
+	 {{ if or (.Get "alt") (.Get "caption") }}
+	 alt="{{ with .Get "alt" }}{{ . }}
+				{{ else }}
+				{{ .Get "caption" }}
+						 {{ end }}"
+	 {{ end }}
+	 {{ with .Get "mouse" }} title="{{.}}"{{ end }}
+	 {{ with .Get "width" }}style="width: {{.}};"{{ end }}
+	 />
+    
+    </a>
+  
+  
+  {{ with (.Get "caption") }}
+  <figcaption>
+    <p><i>{{.}}</i></p>
+  </figcaption>
+  {{ end }}
+
+</figure>
+<!-- image -->

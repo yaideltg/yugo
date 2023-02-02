@@ -1,0 +1,1 @@
+<p>&copy; {{ dateFormat "2006" "2023-01-10" }}-{{ dateFormat "2006" now }} {{ .Site.Title }}</p>

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /contact/
+Disallow: /rss/
+Disallow: /license/
+
+{{ range where .Data.Pages "Params.robotsdisallow" true }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
