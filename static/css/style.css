@@ -145,7 +145,7 @@ article.content sup, article.content sub {
   transition: 0.5s;
 }
 
- /* Ctaegories and Tags cloud design */
+ /* Cataegories and Tags cloud design */
 
 .catagcloud {
     padding: 5px;
@@ -201,6 +201,7 @@ article.content ul li, article.content ol li{
     padding: 5px;
     font-size: calc(var(--baseFontSize) + 20%);
     text-align: justify;
+    line-height: 1.5;
 }
 
 /* Define the style of the post's tags */
@@ -237,6 +238,35 @@ ul.post-tags li, .post-translations li {
     margin-top: -3%;
     margin-left: 1.5%;
     padding: 10px;
+}
+
+/* QUOTES */
+
+blockquote{
+    font-size: var(--baseFontSize);
+    max-width: 100%;
+    margin:auto;
+    font-family: Verdana, sans-serif;
+    color: #555555;
+    padding: 5px 30px 5px 65px;
+    border-left:5px solid #78C0A8 ;
+    line-height:1.4;
+    position: relative;
+    background:#EDEDED;
+}
+
+blockquote::before{
+    font-size: calc(var(--baseFontSize) + 600%);
+    font-family: Verdana, sans-serif;
+    content: "\201C";
+    color:#78C0A8;
+    position: absolute;
+    left: 10px;
+    top:-10px;
+}
+
+blockquote::after{
+    content: '';
 }
 
 /* FIGURES */
