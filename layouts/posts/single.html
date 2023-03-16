@@ -14,8 +14,8 @@
     </ul>
 
     <!-- Show relevant dates and reading information -->
-    {{ $date := .Date.Format "02.01.2006" }}
-    {{ $lastmod := .Lastmod.Format "02.01.2006" }}
+    {{ $date := .Date.Format "2006.01.02" }}
+    {{ $lastmod := .Lastmod.Format "2006.01.02" }}
 
     <p id="post-date-and-reading">
       {{ i18n "publishDate" }} {{ .Date.Format "Jan 2, 2006" }}
