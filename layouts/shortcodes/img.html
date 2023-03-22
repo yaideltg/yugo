@@ -14,7 +14,7 @@
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}
 	{{ with .Get "width" }}style="width: {{.}};"{{ end }}
 	>
-
+  
   {{ if (.Get "link") }}
   {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
     {{ else }}

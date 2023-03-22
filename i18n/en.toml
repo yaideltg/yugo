@@ -53,6 +53,11 @@
 [on]
 	other = "on"
 
+# Donations
+
+[donate]
+	other = "Donate"
+
 
 
 

@@ -198,8 +198,14 @@ article.content sup, article.content sub {
 /* POSTS BODY */
 
 article.content ul li, article.content ol li{
-    padding: 5px;
+    padding: 3px;
     font-size: calc(var(--baseFontSize) + 20%);
+    text-align: justify;
+    line-height: 1.5;
+}
+
+article.content ul ul, article.content ol ol {
+    font-size: calc(var(--baseFontSize) - 20%);
     text-align: justify;
     line-height: 1.5;
 }

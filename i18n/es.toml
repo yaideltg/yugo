@@ -63,3 +63,6 @@
 	other = "en"
 
 
+# Donaciones
+[donate]
+	other = "Donar"
