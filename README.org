@@ -19,11 +19,9 @@ I used it in my website [[https://poview.org/][poview.org]] since the beginning,
 mode switching. Anyway it could be very useful for anyone wanting something simple and functional. Check out a
 picture below.
 
-#+begin_src html
 <p align="center">
   <img src="./screenshot.png" width="350" title="Home page">
 </p>
-#+end_src
 
 #+begin_example
 ---
