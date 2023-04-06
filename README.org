@@ -1,0 +1,19 @@
+#+title: Yugo, a simple and responsive theme for Hugo
+#+author: yaideltg
+
+
+
+#+begin_example
+---
+title: ""
+author:
+  post_name: "My Name Displayed in the post Metadata"
+  mdata_name: "My Name Displayed in the page head"
+date: "2023-01-01"
+lastmod: "2023-01-01"
+categories: ["cat1", "cat2"]
+tags: ["tag1", "tag2"]
+draft: true
+description: The description is only used in the page head. 
+---
+#+end_example

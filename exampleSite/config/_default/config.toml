@@ -1,0 +1,65 @@
+baseURL = "https://poview.org"
+title = "Point of View"
+theme = "yugo"
+
+summaryLength = 50
+paginate = 10
+  
+copyright = 'This work is licensed under an Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license.'
+
+enableRobotsTXT = true
+
+defaultContentLanguage = 'en'
+#defaultContentLanguageInSubdir = true
+
+[author]
+  name = 'Yaidel'
+
+[redirects]
+    from   = "/**"
+    to     = "/404.html"
+    status = 404
+
+[sitemap]
+    ChangeFreq = "Weekly"
+    Priority = "1"
+  
+# From https://gohugo.io/getting-started/configuration/#configure-dates
+# [frontmatter]
+#     date = ['date', 'publishDate', 'lastmod']
+#     expiryDate = ['expiryDate']
+#     lastmod = ['lastmod', ':fileModTime', ':default']
+#     publishDate = ['publishDate', 'date']
+ 
+#
+# SITE LANGUAGES
+#
+[languages]
+  [languages.en]
+    title = 'Point of View'
+    weight = 1
+    languageName = 'English'
+  [languages.es]
+    title = 'Punto de Vista'
+    weight = 2
+    languageName = 'Español'
+
+#
+# RELATED CONTENT TO A POST
+#
+
+[related]
+    threshold = 90
+    includeNewer = true
+    toLower = true
+
+    [[related.indices]]
+        name = "categories"
+        weight = 80
+
+    [[related.indices]]
+        name = "tags"
+        weight = 80
+
+
+

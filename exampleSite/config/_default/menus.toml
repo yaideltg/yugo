@@ -1,0 +1,30 @@
+[[main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts"
+  weight = 10
+
+[[main]]
+  identifier = "about"
+  name = "About"
+  url = "/about"
+  weight = 20
+
+[[main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact"
+  weight = 20
+
+[[main]]
+  identifier = "rss"
+  name = "RSS Feeds"
+  url = "/rss"
+  weight = 30
+
+[[main]]
+  identifier = "donate"
+  name = "Donate"
+  url = "/donate"
+  weight = 40
+

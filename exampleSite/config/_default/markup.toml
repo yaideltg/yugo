@@ -1,0 +1,9 @@
+# See default config at https://gohugo.io/getting-started/configuration-markup/#highlight
+#
+# See values meaning at https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode
+#
+[highlight]
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    style = 'emacs'
