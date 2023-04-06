@@ -1,6 +1,17 @@
 #+title: Yugo, a simple and responsive theme for Hugo
 #+author: yaideltg
 
+This is a theme for Hugo which is based only in HTML and CSS. Its aim is to be really simple, but still
+provide some nice functionalities like:
+1. Multilingual support
+2. Tags and categories in the side
+3. RSS feeds for the whole site and each category independently
+4. A list of the most recent posts in the *Home* page
+5. A list of all the posts in the *Post* page, with functional pagination (set to 10 posts per page).
+
+
+The game of the name is really a copy of the [[https://github.com/LukeSmithxyz/lugo][lugo theme]] by Luke Smith.
+
 
 
 #+begin_example
