@@ -17,11 +17,7 @@ maintained, as I believe there is nothing to maintain here.
 
 I used it in my website [[https://poview.org/][poview.org]] since the beginning, but I wanted something more beautiful and with light/night
 mode switching. Anyway it could be very useful for anyone wanting something simple and functional. Check out a
-picture below.
-
-<p align="center">
-  <img src="./screenshot.png" width="350" title="Home page">
-</p>
+screenshot of the Home page here [[file:screenshot.png][Screenshot of the Home page]].
 
 #+begin_example
 ---
