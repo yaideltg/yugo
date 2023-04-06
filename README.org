@@ -1,7 +1,7 @@
 #+title: Yugo, a simple and responsive theme for Hugo
 #+author: yaideltg
 
-This is a theme for Hugo which is based only in HTML and CSS. Its aim is to be really simple, but still
+This is a theme for Hugo which is based only in Go, HTML and CSS. Its aim is to be really simple, but still
 provide some nice functionalities like:
 1. Multilingual support
 2. Tags and categories in the side
@@ -12,7 +12,14 @@ provide some nice functionalities like:
 
 The game of the name is really a copy of the [[https://github.com/LukeSmithxyz/lugo][lugo theme]] by Luke Smith.
 
+I wrote it myself from scratch, and it helped me a lot for understanding how things work in Hugo. It is not
+maintained, as I believe there is nothing to maintain here.
 
+I used it in my website [[https://poview.org/][poview.org]] since the beginning, but I wanted something more beautiful and with light/night
+mode switching. Anyway it could be very useful for anyone wanting something simple and functional. Check out a
+picture below.
+
+[[file:screenshot.png][Screenshot of the Home page]]
 
 #+begin_example
 ---
