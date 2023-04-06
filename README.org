@@ -19,6 +19,10 @@ I used it in my website [[https://poview.org/][poview.org]] since the beginning,
 mode switching. Anyway it could be very useful for anyone wanting something simple and functional. Check out a
 screenshot of the Home page here [[file:screenshot.png][Screenshot of the Home page]].
 
+* Post preface example
+
+This is an example of the preface for a post
+
 #+begin_example
 ---
 title: ""
