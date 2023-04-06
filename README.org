@@ -19,6 +19,18 @@ I used it in my website [[https://poview.org/][poview.org]] since the beginning,
 mode switching. Anyway it could be very useful for anyone wanting something simple and functional. Check out a
 screenshot of the Home page here [[file:screenshot.png][Screenshot of the Home page]].
 
+* Making it work on your own site
+
+I have included an example site (see =exampleSite= folder). To make it work, you just need to copy all the
+theme folders, i.e. excluding =exampleSite=, into =/exampleSite/themes/yugo/=. Another alternative is to use
+links, like
+
+#+begin_src shell
+  cd exampleSite/theme
+  ln -s ../../../yugo
+  hugo server -D --noHTTPCache --disableFastRender --navigateToChanged
+#+end_src
+
 * Post preface example
 
 This is an example of the preface for a post
