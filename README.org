@@ -19,7 +19,7 @@ I used it in my website [[https://poview.org/][poview.org]] since the beginning,
 mode switching. Anyway it could be very useful for anyone wanting something simple and functional. Check out a
 picture below.
 
-[[file:screenshot.png][Screenshot of the Home page]]
+[![file:screenshot.png][Screenshot of the Home page]]
 
 #+begin_example
 ---
